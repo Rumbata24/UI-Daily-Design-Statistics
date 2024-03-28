@@ -1,7 +1,6 @@
 import "../PageViewsGraph/PageViewsGraph.css";
 ("use-client");
 import { BarChart, Bar } from "recharts";
-
 const data = [
   { name: "Jan", uv: 1000, pv: 1400, amt: 2400 },
   { name: "Feb", uv: 1000, pv: 798, amt: 2210 },
@@ -37,7 +36,7 @@ const PageViewsGraph = () => {
       <section className="wrapper-statics">
         <p>Page views per minutes</p>
         <BarChart
-          width={668}
+          width={568}
           height={100}
           data={data}
           barCategoryGap="10%"
@@ -46,7 +45,9 @@ const PageViewsGraph = () => {
           <Bar dataKey="pv" fill="#0E1731" barSize={9} />
           <Bar dataKey="uv" fill="#0E1731" barSize={9} />
         </BarChart>
-        <h3>View refferals</h3>
+        <div className="bottom">
+          <a href="#">View refferals</a>
+        </div>
       </section>
     </>
   );
